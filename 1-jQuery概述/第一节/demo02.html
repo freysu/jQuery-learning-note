@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多个按钮绑定点击事件-jquery</title>
+</head>
+
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <!-- 这种写法是错误的 
+    <script src="./script/jquery.js">
+        //code
+    </script>-->
+
+    <!-- 这种写法也是错误的  
+    <script>
+        // code
+    </script>
+    <script src="./script/jquery.js"></script>-->
+
+    <!-- 如果要使用jquery，必须把jquery的代码放到引入的标签下面  -->
+    <script src="./script/jquery.js"></script>
+    <script>
+        // code
+        // jquery的获取节点 $("选择器")  原生JS document.querySelectorAll("button")
+        $("button").click(function () {
+            console.log("hello world!");
+        });
+    </script>
+</body>
+
+</html>

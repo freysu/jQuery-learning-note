@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二节-demo04-find()和parent()</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <button>按钮</button>
+    </div>
+    <div class="box">
+        <button>按钮</button>
+    </div>
+    <div class="box">
+        <button>按钮</button>
+    </div>
+
+    <script src="../script/jquery.js"></script>
+    <script>
+        // $(".box").click(function(){
+        //     // find("选择器"); 获取子级
+        //     $(this).find("button").css("background-color","red");
+        // })
+
+        $("button").click(function () {
+            $(this).parent().css("background-color", "red");
+            // parent(); 获取父级
+
+        })
+    </script>
+</body>
+
+</html>

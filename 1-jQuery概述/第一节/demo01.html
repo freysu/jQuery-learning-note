@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多个按钮绑定点击事件-原生JS</title>
+</head>
+
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <script>
+        // 获取节点 querySelector 只会选择一个
+        let btn = document.querySelector("button");
+        // 绑定事件
+        // btn.addEventListener("click",)
+        btn.onclick = function () {
+            console.log("hello world!");
+        }
+
+        let btnList = document.querySelectorAll("button");
+        for (let i in btnList) {
+            btnList[i].onclick = function () {
+                console.log(i);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

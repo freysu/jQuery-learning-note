@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二节-demo03</title>
+    <style type="text/css">
+        img {
+            width: 300px;
+            height: 187.5px;
+        }
+
+        /* 设置背景色（通过添加className） */
+        .active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="./img/git.png" alt="">
+    <button>改变</button> -->
+    <img src="./img/git.png" alt="">
+    <div class="btn-list">
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+    </div>
+    <script src="../script/jquery.js"></script>
+    <script>
+        // $("button").click(function () {
+        //     if ($("img").attr("src") == "./img/java.png") {
+        //         $("img").attr("src", "./img/git.png");
+        //     } else {
+        //         $("img").attr("src", "./img/java.png");
+        //     }
+        // })
+
+        let imgSrc = [
+            "./img/git.png",
+            "./img/java.png",
+            "./img/fepic.png",
+        ];
+        $("button").click(function () {
+            //   获取索引
+            let index = $(this).index();
+            // 设置属性
+            $("img").attr("src", imgSrc[index]);
+            // 设置背景色（通过添加className）
+            // $(this).addClass("active");
+            // 去掉背景色（通过删除className）
+            // $(this).removeClass("active");
+            
+
+            // 切换class
+            // $(this).toggleClass("active");
+
+            
+            // // 判断有没有设成这个类名
+            // if ($(this).hasClass("active") == true) {
+            //     $(this).removeClass("active");
+            // } else {
+            //     $(this).addClass("active");
+
+            // }
+            // // 将红色变成默认的颜色
+            // if ($(this).css("background-color") == "rgb(255, 0, 0)") {
+            //     $(this).css("background-color", "rgb(239, 239, 239)");
+            // } else if ($(this).css("background-color", "rgb(239, 239, 239)")) {
+            //     $(this).css("background-color", "rgb(255, 0, 0)");
+            // }
+
+                        // siblings(); 获取同级其他元素
+            // 不同的例子
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+
+
+        })
+    </script>
+</body>
+
+</html>

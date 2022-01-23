@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二节-demo01</title>
+</head>
+
+<body>
+    <input type="button" value="按钮1">
+    <input type="button" value="按钮2">
+
+    <script src="../script/jquery.js"></script>
+    <script>
+        // $()包装，将DOM对象包装成jQuery对象，之后就可以使用jQuery的方法
+        // DOM对象
+        // jQuery是通过$()包装的对象
+        $("input").click(function () {
+            // jQuery this指向的是DOM对象  原生js，DOM的this 事件触发的时候谁调用这个函数指的就是谁
+            console.log(this); // this指向的是DOM对象
+            console.log($(this)); // this指向jQuery对象
+
+            // DOM 接口 DOM.value jQuery .val()的意义：处理浏览器兼容
+            console.log(this.value); // 按钮1
+            console.log($(this).val()); // 按钮1
+
+        })
+    </script>
+</body>
+
+</html>

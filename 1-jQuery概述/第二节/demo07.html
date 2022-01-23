@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二节-demo07</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="show fadeIn">显示</button>
+    <button class="hide fadeOut">隐藏</button>
+    <div class="box"></div>
+
+    <script src="../script/jquery.js"></script>
+    <script>
+        // $(".show").click(function () {
+        //     // show(); 显示
+        //     // $(".box").show();
+        //     // 以500毫秒显示
+        //     $(".box").show(500);
+        // })
+        // $(".hide").click(function () {
+        //     // hide(); 隐藏
+        //     // $(".box").hide();
+        //     // 以500毫秒隐藏
+        //     $(".box").hide(500);
+        // })
+
+        $(".fadeIn").click(function () {
+            // fadeIn(); 透明度逐渐增加显示 "淡入"
+            // $(".box").fadeIn();
+            // 以500毫秒显示
+            $(".box").fadeIn(500);
+        })
+        $(".fadeOut").click(function () {
+            // fadeOut(); 透明度逐渐减小隐藏 "淡出"
+            // $(".box").fadeOut();
+            // 以500毫秒隐藏
+            $(".box").fadeOut(500);
+        })
+    </script>
+</body>
+
+</html>

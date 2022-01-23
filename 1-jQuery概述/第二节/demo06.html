@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二节-demo06-mouseenter()、mouseleave()和mousemove()</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <script src="../script/jquery.js"></script>
+    <script>
+        // // mouseenter() 移入
+        // $(".box").mouseenter(function(){
+        //     console.log("hello world!");
+        // });
+        // // mouseleave() 移出
+        // $(".box").mouseleave(function(){
+        //     console.log("hello world!");
+        // });
+        // // mousemove() 移动
+        // $(".box").mousemove(function(){
+        //     console.log("moving");
+        // });
+
+        // 链式操作 它们的返回值都是$(".box")，所以可以写成如下：
+        $(".box").mouseenter(function () {
+            console.log("表哥，我进来了哦");
+        }).mouseleave(function () {
+            console.log("表哥，我出来了哦");
+        }).mousemove(function (e) {
+            console.log("moving");
+            let x = e.pageX; // 此时鼠标指针x坐标
+            let y = e.pageY; // 此时鼠标指针y坐标
+            console.log(`此时鼠标指针x坐标是${x},y坐标是${y}`);
+        });
+    </script>
+</body>
+
+</html>

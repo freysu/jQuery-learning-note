@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二节-demo05-append()和remove()</title>
+</head>
+<body>
+    <input type="text" value="">
+    <button>ADD</button>
+    <ul class="fruit-list">
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>鸭梨</li>
+    </ul>
+    <script src="../script/jquery.js"></script>
+    <script>
+        // 没有事件委托
+        // $(".fruit-list li").click(function(){
+        //     // remove(); 删除元素节点
+        //     $(this).remove();
+        // });
+        $("button").click(function(){
+            let value = $("input").val();
+            let li = $(`<li>${value}</li>`);
+            // 把li插入到ul里面
+            $(".fruit-list").append(li); 
+        });
+
+        // 事件委托：将子集的事件委托给父级处理
+         $(".fruit-list").on("click","li",function(){
+             // 此时的this指向的是在.fruit-list找到的li
+             $(this).remove();
+         });
+    </script>
+</body>
+</html>
