@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo08_homework1</title>
+    <style>
+        .smallPicList img {
+            width: 320px;
+            height: 160px;
+        }
+
+        .bigPicList {
+            position: absolute;
+        }
+
+        .bigPicList img {
+            width: 640px;
+            height: 320px;
+        }
+    </style>
+    <script src="../script/jquery.js"></script>
+    <script>
+        /**
+         * ## 课后练习
+         * 1. 轮播图练习
+         * 2. 水果列表的添加与删除
+         * 3. 随鼠标显示大图 
+         */
+
+        // // HOMEWORK 1
+        // let imgSrc = [
+        //     "./img/fepic.png",
+        //     "./img/git.png",
+        //     "./img/java.png",
+        // ];
+        // $("button").click(function () {
+        //     let index = $(this).index();
+        //     $("img").attr("src", imgSrc[index]);
+        //     $(this).addClass("active");
+        //     $(this).siblings().removeClass("active");
+        // });
+
+        // // HOMEWORK 2
+        // $(".fruit-list").on("click", "li", function () {
+        //     $(this).remove();
+        // });
+        // $(".clear").click(function () {
+        //     $(".fruit-lists li").remove();
+        // })
+        // $(".add").click(function () {
+        //     var val = $("input").val();
+        //     var li = $(`<li>${val}</li>`);
+        //     console.log(val);
+        //     $("ul").append(li);
+        // });
+
+        // // HOMEWORK 3
+        // // 获取节点 - 小图盒子里所有小图 
+        // // hover() 、 movereenter() 和mouseover的区别
+        // // hover()： hover(fn,fn1) fn1:mouseleave()
+        // // mouseenter(): mouseenter(fn)
+        // // mouseover(): 
+        // $(function () {
+        //     $(`.smallPicList img`).hover(function () {
+        //         let picSrc = $(this).attr("src");
+        //         let bigPicList = `<div class="bigPicList"><img src="${picSrc}" alt="" /></div>`;
+        //         console.log('coming');
+        //         $(`body`).append(bigPicList);
+        //     }, function () {
+        //         $(`.bigPicList`).remove();
+        //     }).mousemove(function (e) {
+        //         let x = e.pageX;
+        //         let y = e.pageY;
+        //         let currX = x + 10;
+        //         let currY = y + 10;
+        //         // 因为获取的坐标是数字，所以要另外加px像素单位。
+        //         $(".bigPicList").css({
+        //             position: "absolute",
+        //             left: e.pageX + 10,
+        //             top: e.pageY + 10,
+        //         });
+        //     });
+        // });
+
+        $(function () {
+            $(`.smallPicList img`).mouseover(function () {
+                let picSrc = $(this).attr("src");
+                let bigPicList = `<div class="bigPicList"><img src="${picSrc}" alt="" /></div>`;
+                console.log('coming');
+                $(`body`).append(bigPicList);
+            }).mousemove(function (e) {
+                let x = e.pageX;
+                let y = e.pageY;
+                let currX = x + 10 + `px`;
+                let currY = y + 10 + `px`;
+                // 因为获取的坐标是数字，所以要另外加px像素单位。
+                $(".bigPicList").css({
+                    position: "absolute",
+                    left: currX,
+                    top: currY,
+                });
+                // // ❗ 错误写法 attr()和css()是不一样的
+                // // 1. 作用不同 attr()用来获取设置属性值，css()才是用来操作样式的
+                // // 2. 优先级不同 jquery中的css()是用来操纵style{}的，而attr()是加在标签内部的，attr()的权重比css()要大，它会覆盖css()的样式。
+                // // 3. 3.获取权限不同 在jquery里，css可取该标签定义的css的属性，attr只能取该标签里自带的属性。也就是说，如果直接在div中定义的属性，css无法获得。attr可以获得css中的也可以获得其他标签里自带的属性，而标签里没有自带的属性，attr也无法获得。
+                // $(".bigPicList").attr("position", "absolute");
+                // $(".bigPicList").attr("top", currY);
+                // $(".bigPicList").attr("left", currX);
+            }).mouseleave(function () {
+                $(`.bigPicList`).remove();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <img src="./img/fepic.png" alt="">
+    <div class="btn-list">
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+    </div> -->
+    <!-- <div class="fruit-list">
+        <input type="text" value="" />
+        <button class="add">add</button>
+        <button class="clear">clear</button>
+        <h1>Fruit List</h1>
+        <ul>
+            <li>apple</li>
+            <li>pear</li>
+            <li>lemon</li>
+        </ul>
+    </div> -->
+
+    <div class="smallPicList">
+        <img src="./img/fepic.png" alt="">
+        <img src="./img/git.png" alt="">
+        <img src="./img/java.png" alt="">
+    </div>
+</body>
+
+</html>
