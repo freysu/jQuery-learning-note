@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 栅格系统</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        .item {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 将最外面的布局元素 .container 修改为 .container-fluid，就可以将固定宽度的栅格布局转换为 100% 宽度的布局。 -->
+    <!-- <div class="container-fluid"></div> -->
+    <div class="container">
+        <!-- 竖向排列 -->
+        <div class="row">
+            <!-- 默认是一行一行显示的 -->
+            <div class="item ">123</div>
+            <div class="item ">123</div>
+            <div class="item ">123</div>
+            <!-- col-md >=992px 横向排列 .col-xs-	.col-sm-	.col-md-	.col-lg-  -->
+            <div class="item col-md-4">123</div>
+            <div class="item col-md-4">123</div>
+            <div class="item col-md-4">123</div>
+        </div>
+    </div>
+</body>
+
+</html>

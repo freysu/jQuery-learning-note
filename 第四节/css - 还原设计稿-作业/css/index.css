@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container .content .clear::after,
+.container .content .clear::before {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.header {
+  margin: 0 auto;
+  width: 1262px;
+  height: 60px;
+}
+
+.header .header_logo {
+  line-height: 60px;
+  float: left;
+}
+
+.header .nav {
+  float: left;
+}
+
+.header .nav li {
+  float: left;
+
+  list-style: none;
+
+  width: 116px;
+
+  line-height: 60px;
+  text-align: center;
+}
+
+.header .nav li a {
+  text-decoration: none;
+
+  color: black;
+}
+
+.header .nav li:hover {
+  box-sizing: border-box;
+  border-bottom: 1px solid blue;
+}
+
+.header .header_search {
+  float: left;
+
+  margin-left: 125px;
+
+  line-height: 60px;
+}
+
+.header .header_login a {
+  float: left;
+
+  margin-left: 68px;
+
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+
+  color: white;
+  background-color: blue;
+}
+
+/* 主体 */
+.container {
+  margin: 0 auto;
+  width: 1262px;
+}
+
+/* 左边主内容 */
+.container .content {
+  float: left;
+
+  margin-top: 15px;
+  margin-right: 14px;
+  width: 957px;
+}
+
+/* 列表标题 */
+.container .content .list_title {
+  float: left;
+  /* margin-top:10px; */
+
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid blue;
+  padding-right: 20px;
+  padding-left: 25px;
+  width: 957px;
+  height: 50px;
+
+  line-height: 50px;
+  text-align: center;
+}
+
+.container .content .list_title .list_title_p {
+  float: left;
+}
+
+.container .content .list_title .list_title_pmore {
+  font-size: 16px;
+
+  color: #808080;
+}
+
+/* 查看更多 */
+.container .content .list_title a {
+  float: right;
+
+  text-decoration: none;
+
+  color: #808080;
+}
+
+/* 列表内容 */
+.container .content .list_description {
+  float: left;
+
+  list-style: none;
+
+  width: 957px;
+}
+
+.container .content .list_description .list {
+  margin-bottom: 10px;
+  border: 1px solid blue;
+}
+
+/* 封面图 */
+.container .content .list_description .list_description_img {
+  /* border:1px solid red; */
+  float: left;
+
+  margin-top: 25px;
+  margin-left: 15px;
+  padding-bottom: 25px;
+}
+
+/* 名字时间按钮 */
+.container .content .list_description .list_description_text {
+  /* border:1px solid blue; */
+  /* background-color: blue; */
+  float: left;
+  /* padding-bottom:25px; */
+
+  margin-left: 25px;
+  padding-top: 35px;
+}
+
+.container .content .list_description .list_description_text .title {
+  margin-bottom: 15px;
+
+  font-size: 18px;
+}
+
+.container .content .list_description .list_description_text .time {
+  margin-bottom: 23px;
+
+  font-size: 16px;
+
+  color: #b2b2b2;
+}
+
+.container .content .list_description .list_description_text a {
+  display: block;
+
+  width: 90px;
+  height: 41px;
+  /* box-sizing: border-box; */
+
+  font-size: 14px;
+  line-height: 41px;
+  text-align: center;
+  text-decoration: none;
+
+  color: #0084ff;
+  background-color: #e3f0fc;
+}
+
+.container .content .list_description .list_description_text .dsc {
+  width: 660px;
+
+  font-size: 16px;
+
+  color: #666;
+}
+
+/* 右侧栏 */
+.container .slider {
+  float: right;
+
+  margin-top: 15px;
+  /* border:1px solid blue; */
+  box-sizing: border-box;
+  width: 291px;
+}
+
+.container .slider_part1 {
+  float: left;
+  border: 1px solid blue;
+}
+
+/* .container .slider .lunbo .slider_photo {
+  width: 290px;
+  height: 180px;
+} */
+
+.container .slider_part1 .swiper-container {
+  width: 290px;
+  height: 180px;
+}
+
+.container .slider_part1 .swiper-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .slider_part1 .swiper {
+  width: 290px;
+  height: 180px;
+}
+
+.container .slider .rcm_title {
+  padding-bottom: 15px;
+  padding-left: 22px;
+}
+
+.container .slider .rcm_list .rcm_list_one {
+  list-style: none;
+
+  margin-right: 10px;
+  margin-left: 10px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container .slider .rcm_list_pic {
+  float: left;
+
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 12px;
+}
+
+.container .slider .rcm_list_dsc {
+  float: left;
+
+  margin-top: 25px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.container .slider .rcm_list_dsc .title {
+  margin-bottom: 25px;
+}
+
+.container .slider .rcm_list_dsc a {
+  display: block;
+
+  width: 58px;
+  height: 27px;
+  /* box-sizing: border-box; */
+
+  font-size: 14px;
+  line-height: 27px;
+  text-align: center;
+  text-decoration: none;
+
+  color: #0084ff;
+  background-color: #e3f0fc;
+}
+
+.container .slider .faq_list {
+  margin: 0 auto;
+  width: 270px;
+  height: 46px;
+}
+
+.container .slider .faq_list .faq_dsc {
+  float: left;
+
+  list-style: none;
+
+  margin-right: 10px;
+  margin-left: 12px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container .slider .faq_list .faq_dsc a {
+  font-size: 14px;
+  line-height: 46px;
+  text-align: center;
+
+  color: black;
+}
+
+.container .slider .faq_list .faq_dsc_3 {
+  padding-bottom: 30px;
+}
+
+.container .slider .right_footer {
+  float: left;
+
+  margin-top: 20px;
+
+  font-size: 13px;
+}
+
+.container .slider .right_footer .footer_p {
+  margin-top: 12px;
+  width: 269px;
+  height: 20px;
+
+  color: #b2b2b2;
+}
+
+.fixed_btn {
+  position: fixed;
+  bottom: 100px;
+  left: 60%;
+
+  margin-left: 500px;
+  width: 40px;
+  height: 40px;
+}
+
+.contact:hover {
+  border: 1px solid blue;
+}
+
+.wechat:hover {
+  border: 1px solid red;
+}
